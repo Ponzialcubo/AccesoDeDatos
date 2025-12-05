@@ -5,6 +5,9 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+@Entity
+@Table(name= "Reserva")
+
 public class Reserva {
 
     @Id
@@ -28,9 +31,11 @@ public class Reserva {
     @Column(name = "aula_id", nullable = false)
     private Integer aulaId;
 
+    // JPA OBLIGA a tener un constructor vacío
     public Reserva() {
     }
 
+    // Tu constructor maestro (útil para pruebas)
     public Reserva(LocalDate fecha, LocalTime horaInicio, LocalTime horaFin, Integer aulaId) {
         this.fecha = fecha;
         this.horaInicio = horaInicio;
@@ -38,6 +43,7 @@ public class Reserva {
         this.aulaId = aulaId;
     }
 
+    // Getter y Setter
     public LocalDate getFecha () {
         return fecha;
     }

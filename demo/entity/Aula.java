@@ -22,16 +22,19 @@ public class Aula {
   
     @Column(length = 50)
     private String edificio;
-
+    
+    // JPA OBLIGA a tener un constructor vacío
     public Aula() {
     }
 
+    // Tu constructor maestro 
     public Aula(String nombre, int capacidad, String edificio) {
         this.nombre = nombre;
         this.capacidad = capacidad;
         this.edificio = edificio;
     }
 
+    // Getter y Setter
     public Integer getId() {
         return id;
     }
