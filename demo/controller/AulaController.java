@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Aula;
 import com.example.demo.service.AulaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -10,11 +11,8 @@ import java.util.List;
 @RequestMapping("/aulas")
 public class AulaController {
 
-    private final AulaService aulaService;
-
-    public AulaController(AulaService aulaService) {
-        this.aulaService = aulaService;
-    }
+    @Autowired 
+    private AulaService aulaService;
 
     // Devolver todas las aulas
     @GetMapping

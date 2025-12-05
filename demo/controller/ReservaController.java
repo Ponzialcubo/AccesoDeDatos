@@ -20,9 +20,10 @@ public class ReservaController {
         return reservaService.findAll();
     }
 
+    // Obtener por Id
     @GetMapping("/{id}")
     public Reserva getById(@PathVariable Integer id) {
-        return reservaService.findById(id).orElse(null);
+        return reservaService.findById(id);
     }
 
     // Guardar
