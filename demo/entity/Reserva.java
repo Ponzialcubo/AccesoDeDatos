@@ -9,7 +9,6 @@ import java.time.LocalTime;
 @Table(name= "Reserva")
 
 public class Reserva {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
@@ -35,7 +34,7 @@ public class Reserva {
     public Reserva() {
     }
 
-    // Tu constructor maestro (útil para pruebas)
+    // Tu constructor maestro 
     public Reserva(LocalDate fecha, LocalTime horaInicio, LocalTime horaFin, Integer aulaId) {
         this.fecha = fecha;
         this.horaInicio = horaInicio;
