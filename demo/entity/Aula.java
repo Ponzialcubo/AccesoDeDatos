@@ -14,10 +14,10 @@ public class Aula {
     private Integer id;
 
     // añadir mínimo 3 atributos (ejemplo: nombre, capacidad, edificio)
-    @Column(nullable = false, lenght = 100)
+    @Column(nullable = false, length = 100)
     private String nombre;
 
-    @Column(nullable = false, lenght = 10)
+    @Column(nullable = false, length = 10)
     private int capacidad;
   
     @Column(length = 50)
